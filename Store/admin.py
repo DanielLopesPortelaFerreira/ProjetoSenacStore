@@ -24,7 +24,7 @@ class ProdutoAdmin(admin.ModelAdmin):
 
     def ver_imagem(self, obj):
         return mark_safe ('<img src="{url}"width="{width}"height="{heigth}"/>'.format(
-            url = obj.image.url,
+            url = obj.imagem.url,
             width = 75,
             height = 75,
         )
