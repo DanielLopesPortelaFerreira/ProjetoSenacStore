@@ -19,11 +19,11 @@ class ProdutoAdmin(admin.ModelAdmin):
     list_display = ['id', 'nome', 'preco', 'estoque', 'categoria', 'ver_imagem']
     list_display_links = ['id', 'nome']
     list_filter = ['categoria']
-    list_fields = ['nome']
+    search_fields = ['nome']
     readonly_fields = ['ver_imagem']
 
     def ver_imagem(self, obj):
-        return mark_safe ('<img src="{url}"width="{width}"height="{heigth}"/>'.format(
+        return mark_safe ('<img src="{url}"width="{width}"height="{height}"/>'.format(
             url = obj.imagem.url,
             width = 75,
             height = 75,
