@@ -7,5 +7,6 @@ urlpatterns = [
     path('teste/', views.teste, name='teste'),
     path('departamentos/', views.departamentos, name = 'departamentos'),
     path('categorias/<int:id>', views.categoria, name = 'categorias'), # "name" é relativo ao endereço de "http"
-    path('produtos/<int:id>', views.produtos, name = 'produtos')
+    path('produtos/<int:id>', views.produtos, name = 'produtos'),
+    path('produto_detalhe/<int:id>', views.produto_detalhe, name = 'Produto_Detalhe') 
 ]
