@@ -1,0 +1,10 @@
+/*seletores*/
+/*seletor universal*/
+* {
+    color:crimson;
+}
+
+/* seletor por elemento (teg)*/
+h1 {
+    color:blueviolet;
+}
