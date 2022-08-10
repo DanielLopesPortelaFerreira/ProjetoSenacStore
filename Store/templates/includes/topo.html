@@ -1,0 +1,13 @@
+{% comment %} Templape criado para aplicar alterações em todas as demais templates onde se aplicar a função "include" {% endcomment %}
+{% load static%}
+<div id= "topo">
+    <a href= "{% url 'index' %}">
+        <img src="{% static 'img/logo_senac.jpg' %}" width="150">
+    </a>
+    <ul>
+        <li><a href= "{% url 'departamentos' %}">Departamentos</a></li>
+        <li><a href= "{% url 'Contato' %}">Contato</a></li>
+        <li><a href="{% url 'institucional' %}"> Sobre a Empresa</a></li>
+    </ul>
+
+</div>

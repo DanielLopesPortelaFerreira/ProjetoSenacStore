@@ -9,10 +9,13 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css'%}">
 </head>
 <body>
+    {% comment %} função para acessar alteraçoes direto do template "topo.html" {% endcomment %}
+    {% include 'includes/topo.html' %}
     <h1>Categoria de {{ departamento.nome }}</h1>
     <ul>
         {% for cat in categorias %}
-        <li><a href="/produtos/{{cat.id}}">[{{ cat.departamento }}] {{ cat.nome }}</a></li>
+        {% comment %} tag para acrescentar um link {% endcomment %}
+        <li><a href="/produtos/{{cat.id}}">[{{ cat.departamento }}] {{ cat.nome }}</a></li> 
         
         {% empty %}
         Nenhuma categoria encontrada

@@ -40,7 +40,13 @@ def produtos(request, id):
         }
     return render(request, 'produtos.html', context)
 
-def produto_detalhe(request, id):
-    pdt_de = Produto.objects.get(id = id)
+def produto_detalhe(request, id): #linha de nome pagina html
+    pdt_de = Produto.objects.get(id = id) #com esse comando faz uma busca no banco de dados
     context = { 'prod': pdt_de}
     return render(request, 'Produto_Detalhe.html', context)
+
+def institucional(request):
+    return render(request, 'institucional.html')
+
+def contato(request):
+    return render(request, 'Contato.html')

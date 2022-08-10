@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css'%}">
 </head>
 <body>
+    {% comment %} função para chamar alterações em todas as paginas  {% endcomment %}
+    {% include 'includes/topo.html'%}
     <h1>{{ prod.nome }}</h1>
     <h5>{{ prod.categoria.departamento.nome}} >> {{ prod.categoria.nome }}</h5>
     <h3>Preço: R$ {{ prod.preco}}</h3>
